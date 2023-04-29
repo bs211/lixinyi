@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d立方体两个</title>
+    <style>
+        @keyframes roll {
+            form{
+                transform: rotateX(0) rotateY(0) rotateZ(0)
+            }
+            to{
+                transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg)
+            }
+        }
+
+        *{/*去除默认属性 */
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .wrap{
+            /*关键动画点*/
+            margin: 200px;
+            margin-left: 500px;
+            animation: roll 10s linear infinite;
+            /*开启3d*/
+            transform-style: preserve-3d;
+        }
+        .wrap div{
+           opacity: 0.5;
+        }
+
+        .wrap div{
+            line-height: 200px;
+            text-align: center;
+            font-size: 100px;
+            color: aliceblue;
+        }
+        .wrap .small{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+        }
+        .wrap div:nth-of-type(1){
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: blueviolet;
+        }
+        .wrap div:nth-of-type(2){
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: bisque;
+        }
+        .wrap div:nth-of-type(3){
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: blue;
+        }
+        .wrap div:nth-of-type(4){
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: rgb(15, 136, 95);
+        }
+        .wrap div:nth-of-type(5){
+            transform: translateZ(100px);
+            background-color: rgb(46, 75, 178);
+        }
+        .wrap div:nth-of-type(6){
+            transform: rotateX(180deg) translateZ(100px);
+            background-color: rgb(192, 223, 13);
+        }
+
+        
+        .wrap div:nth-of-type(7){
+            transform: rotateY(-90deg) translateZ(50px);
+            background-color: rgb(48, 123, 79);
+        }
+        .wrap div:nth-of-type(8){
+            transform: rotateY(90deg) translateZ(50px);
+            background-color: rgb(50, 86, 178);
+        }
+        .wrap div:nth-of-type(9){
+            transform: rotateX(90deg) translateZ(50px);
+            background-color: rgb(138, 17, 159);
+        }
+        .wrap div:nth-of-type(10){
+            transform: rotateX(90deg) translateZ(50px);
+            background-color: rgb(169, 75, 27);
+        }
+        .wrap div:nth-of-type(11){
+            transform:translateZ(50px);
+            background-color: rgb(49, 164, 139);
+        }
+        .wrap div:nth-of-type(12){
+            transform: rotateX(90deg) translateZ(50px);
+            background-color: rgb(94, 13, 223);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>我</div>
+        <div>真</div>
+        <div>的</div>
+        <div>好</div>
+        <div>聪</div>
+        <div>明</div>
+
+    <div class="small"></div>
+    <div class="small"></div>
+    <div class="small"></div>
+    <div class="small"></div>
+    <div class="small"></div>
+    <div class="small"></div>
+</div>
+</body>
+</html>
