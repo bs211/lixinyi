@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d立方体</title>
+    <style>
+        /* 定义一个动画 */
+        @keyframes roll {
+            form{
+                transform: rotateX(0) rotateY(0) rotateZ(0)
+            }
+            to{
+                transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg)
+            }
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        
+        .wrap div{
+            line-height: 200px;
+            text-align: center;
+            font-size: 100px;
+            color: aliceblue;
+        }
+
+        .wrap{
+            /*关键动画点*/
+            margin: 200px;
+            animation: roll 4s linear infinite;
+            /*开启3d*/
+            transform-style: preserve-3d;
+        }
+        /* 选择器匹配属于父元素的特定类型的第 N 个子元素的每个元素 */
+        .wrap div:nth-of-type(1){
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: blueviolet;
+        }
+        .wrap div:nth-of-type(2){
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: bisque;
+        }
+        .wrap div:nth-of-type(3){
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: blue;
+        }
+        .wrap div:nth-of-type(4){
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: rgb(15, 136, 95);
+        }
+        .wrap div:nth-of-type(5){
+            transform: translateZ(100px);
+            background-color: rgb(46, 75, 178);
+        }
+        .wrap div:nth-of-type(6){
+            transform: rotateX(180deg) translateZ(100px);
+            background-color: rgb(192, 223, 13);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>我</div>
+        <div>真</div>
+        <div>的</div>
+        <div>好</div>
+        <div>聪</div>
+        <div>明</div>
+    </div>
+</body>
+</html>
